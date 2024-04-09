@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Team Manager</title>
+    <script type="module" src="poke.js"></script>
+   <link rel="stylesheet" href="poke.css"/>
+</head>
+<body>
+
+    <header>
+        <h1>PokéManager</h1>
+        <div class="header-home"> 
+            <div class="container">
+                <div class="logo-wrapper">
+                     <a href="Pokemon-Logo-PNG-Pic.png"><img src="Pokemon-Logo-PNG-Pic.png" alt="bild" width="150"/>
+            </a>
+                
+                <div class="search-wrapper">
+                    <div class="search-wrap">
+                        <input type="text"
+                        class="search-input body3-fonts"
+                        placeholder="Search"
+                        id="search-input"
+                        />
+                        
+                        <div class="filter-wrapper">
+                           <p class="body2-fonts">Sort By:</p>
+                           <div class=" filter-wrap"></div>
+                           <div>
+                            <input type="radio" 
+                                   id="number"
+                                   name="filters"
+                                   value="number"
+                                   checked
+                                   />
+                                   <label for="number"
+                                          class="body3-fonts">Number</label>
+                           </div>
+                        </div>
+                        <input type="radio" iid="name"
+                        name="filters" value="name"/>
+                        <label for="name"
+                        class="body3-fonts">Name</label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Home">
+                <Button onclick="showReserve()">Back</Button>
+            </div>
+               
+    </header>
+
+    <main class="main"> 
+    <section class="pokemon-List">
+        <div class="container">
+        <div class="list-wrapper"></div>
+        </div>
+        <div class="not-found-message">Pokemon not found</div>
+    </section>
+
+    <section class="selected-pokemons">
+        <div class="selected">Selected</div>
+    </section>
+
+<!--reserve sida -->
+    <section class="reserved-pokemons">
+        <div class="reserve">Reserve</div>
+        <div id="Reserve">
+    <button onclick="showHome">Return</button>
+</div>
+    </section>
+
+    
+
+</main>    
+</body>
+</html>
