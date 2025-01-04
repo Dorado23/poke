@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon Team Manager</title>
     <script type="module" src="poke.js"></script>
+    <script type="module" src="mons.js"></script>
    <link rel="stylesheet" href="poke.css"/>
 </head>
 <body>
@@ -12,10 +13,11 @@
     <header>
         <h1>PokéManager</h1>
         <div class="header-home"> 
-            <div class="container">
+            
                 <div class="logo-wrapper">
-                     <a href="Pokemon-Logo-PNG-Pic.png"><img src="Pokemon-Logo-PNG-Pic.png" alt="bild" width="150"/>
-            </a>
+                    <a href="Pokemon-Logo-PNG-Pic.png"><img src="Pokemon-Logo-PNG-Pic.png" alt="bild" width="150"/>
+                    </a>
+                </div>
                 
                 <div class="search-wrapper">
                     <div class="search-wrap">
@@ -24,11 +26,28 @@
                         placeholder="Search"
                         id="search-input"
                         />
+                    </div>
+                </div>            
+                        <div class="count">
+                            <div id="counter">0</div>
+                            <button id="increaseBtn">Increase</button>
+                            <button id="decreaseBtn">Decrease</button>
+                            <button id="resetBtn">Reset</button>
+
+                        </div>
+
+                        <section class="select">
+                            <p class="select">SELECTED</p>
+                             <div class="selected"><i class="fa-solid-serach"></i><p id="count">0</p>
+                             
+                             </div>
+                         </section>
+                        
                         
                         <div class="filter-wrapper">
                            <p class="body2-fonts">Sort By:</p>
                            <div class=" filter-wrap"></div>
-                           <div>
+                            <div>
                             <input type="radio" 
                                    id="number"
                                    name="filters"
@@ -38,22 +57,32 @@
                                    <label for="number"
                                           class="body3-fonts">Number</label>
                            </div>
+                           </div>
                         </div>
-                        <input type="radio" iid="name"
-                        name="filters" value="name"/>
-                        <label for="name"
-                        class="body3-fonts">Name</label>
+
+                        <div> 
+                         <input type="radio" id="name"
+                         name="filters" value="name"/>
+                         <label for="name"
+                         class="body3-fonts">Name</label>
+
+                        </div>
+
+                        
                     </div>
-                </div>
-            </div>
+                
+        </div>
 
             <div id="Home">
                 <Button onclick="showReserve()">Back</Button>
             </div>
-               
+             
     </header>
 
-    <main class="main"> 
+
+<!--SEARCH SECTION-->
+<!--<main class="main">  --> 
+
     <section class="pokemon-List">
         <div class="container">
         <div class="list-wrapper"></div>
@@ -61,9 +90,13 @@
         <div class="not-found-message">Pokemon not found</div>
     </section>
 
-    <section class="selected-pokemons">
-        <div class="selected">Selected</div>
-    </section>
+<!--</main>-->
+    
+
+
+   
+
+<script src="mons.js"></script>
 
 <!--reserve sida -->
     <section class="reserved-pokemons">

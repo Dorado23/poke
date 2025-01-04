@@ -13,7 +13,7 @@
         allPokemons = data.results;
         displayPokemons(allPokemons);
         //console.log(data);
-        //console.log(data.results);
+        console.log(data.results);
         //console.log(data.results[0]);
        //console.log(data.results[0].name);
         //console.log(data.results[0].url);
@@ -70,6 +70,28 @@
         });
     }
     
+    /*let count = 0;
+    const counterEl = document.getElementById("counter");
+    document.getElementById("increaseBtn").addEventListener('click', function() {
+        count++;
+        counterEl.textContent = count; // Update counter display
+    });
+
+    //Decrease by 1
+    document.getElementById("decreaseBtn").addEventListener('click', function() {
+    count--;
+    counterEl.textContent = count; // Update counter display( this makes it count not on console. it comes alive!)
+    });
+
+    //Reset
+    document.getElementById("resetBtn").addEventListener('click', function() {
+    count = 0;
+    counterEl.textContent = count;
+    });*/
+
+   
+
+
     searchInput.addEventListener("keyup", handleSearch);
 
     function handleSearch() {
@@ -86,6 +108,7 @@
             filteredPokemons = allPokemons.filter((pokemon) => {
             return pokemon.name.toLowerCase().startsWith(searchTerm);
             });
+
 
         } else {
             filteredPokemons = allPokemons;
